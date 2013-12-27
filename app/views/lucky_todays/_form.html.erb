@@ -1,0 +1,25 @@
+<%= form_for(@lucky_today) do |f| %>
+  <% if @lucky_today.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lucky_today.errors.count, "error") %> prohibited this lucky_today from being saved:</h2>
+
+      <ul>
+      <% @lucky_today.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :applied_at %><br>
+    <%= f.date_select :applied_at %>
+  </div>
+  <div class="field">
+    <%= f.label :discountRate %><br>
+    <%= f.number_field :discountRate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

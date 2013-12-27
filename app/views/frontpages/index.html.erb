@@ -1,0 +1,27 @@
+<h1>Listing frontpages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Display at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @frontpages.each do |frontpage| %>
+      <tr>
+        <td><%= frontpage.display_at %></td>
+        <td><%= link_to 'Show', frontpage %></td>
+        <td><%= link_to 'Edit', edit_frontpage_path(frontpage) %></td>
+        <td><%= link_to 'Destroy', frontpage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Frontpage', new_frontpage_path %>

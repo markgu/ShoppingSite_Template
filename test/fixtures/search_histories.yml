@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  keyword: MyString
+  ranking: 1
+  change: 1
+  new: false
+
+two:
+  keyword: MyString
+  ranking: 1
+  change: 1
+  new: false

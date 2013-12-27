@@ -1,0 +1,29 @@
+<h1>Listing lucky_todays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Applied at</th>
+      <th>Discountrate</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lucky_todays.each do |lucky_today| %>
+      <tr>
+        <td><%= lucky_today.applied_at %></td>
+        <td><%= lucky_today.discountRate %></td>
+        <td><%= link_to 'Show', lucky_today %></td>
+        <td><%= link_to 'Edit', edit_lucky_today_path(lucky_today) %></td>
+        <td><%= link_to 'Destroy', lucky_today, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lucky today', new_lucky_today_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@frontpage) do |f| %>
+  <% if @frontpage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@frontpage.errors.count, "error") %> prohibited this frontpage from being saved:</h2>
+
+      <ul>
+      <% @frontpage.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :display_at %><br>
+    <%= f.text_field :display_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

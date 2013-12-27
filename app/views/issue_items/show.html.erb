@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @issue_item.comment %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @issue_item.startDate %>
+</p>
+
+<p>
+  <strong>Finishdate:</strong>
+  <%= @issue_item.finishDate %>
+</p>
+
+<%= link_to 'Edit', edit_issue_item_path(@issue_item) %> |
+<%= link_to 'Back', issue_items_path %>

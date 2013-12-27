@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  applied_at: 2013-12-27
+  discountRate: 1
+
+two:
+  applied_at: 2013-12-27
+  discountRate: 1

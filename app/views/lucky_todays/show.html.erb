@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Applied at:</strong>
+  <%= @lucky_today.applied_at %>
+</p>
+
+<p>
+  <strong>Discountrate:</strong>
+  <%= @lucky_today.discountRate %>
+</p>
+
+<%= link_to 'Edit', edit_lucky_today_path(@lucky_today) %> |
+<%= link_to 'Back', lucky_todays_path %>

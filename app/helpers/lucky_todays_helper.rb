@@ -1,0 +1,2 @@
+module LuckyTodaysHelper
+end

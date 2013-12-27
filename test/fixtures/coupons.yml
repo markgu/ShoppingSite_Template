@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  amount: 1
+  expire: 2013-12-27
+  givenBy: MyString
+
+two:
+  amount: 1
+  expire: 2013-12-27
+  givenBy: MyString

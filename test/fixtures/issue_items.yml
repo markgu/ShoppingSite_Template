@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  comment: MyText
+  startDate: 2013-12-27
+  finishDate: 2013-12-27
+
+two:
+  comment: MyText
+  startDate: 2013-12-27
+  finishDate: 2013-12-27

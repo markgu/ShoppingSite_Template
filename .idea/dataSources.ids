@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails ShoppingSite_Template: development" uuid="d1f3ccd6-191b-4a45-ab0a-25d6a08f8176">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails ShoppingSite_Template: test" uuid="7bba5027-8e51-4c0a-b3b9-ab7614e3c21c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
