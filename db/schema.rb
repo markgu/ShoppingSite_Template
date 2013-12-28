@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227234157) do
+ActiveRecord::Schema.define(version: 20131228120106) do
+
+  create_table "billing_products", force: true do |t|
+    t.string   "productName"
+    t.integer  "amount"
+    t.integer  "subTotal"
+    t.integer  "total"
+    t.integer  "billing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "billings", force: true do |t|
     t.integer  "orderNo"
     t.integer  "amount"
     t.string   "address",    limit: 200
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,11 +36,13 @@ ActiveRecord::Schema.define(version: 20131227234157) do
     t.integer  "amount"
     t.date     "expire"
     t.string   "givenBy"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "favorites", force: true do |t|
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -58,12 +71,15 @@ ActiveRecord::Schema.define(version: 20131227234157) do
   create_table "product_categories", force: true do |t|
     t.string   "name"
     t.integer  "depth"
+    t.integer  "product_categories_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "product_comments", force: true do |t|
     t.string   "text"
+    t.integer  "user_id"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -72,6 +88,7 @@ ActiveRecord::Schema.define(version: 20131227234157) do
     t.integer  "width"
     t.integer  "height"
     t.integer  "size"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -81,6 +98,8 @@ ActiveRecord::Schema.define(version: 20131227234157) do
     t.integer  "price"
     t.integer  "inStock"
     t.text     "info"
+    t.integer  "product_category_id"
+    t.integer  "seller_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -104,6 +123,7 @@ ActiveRecord::Schema.define(version: 20131227234157) do
 
   create_table "shopping_carts", force: true do |t|
     t.integer  "amount"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

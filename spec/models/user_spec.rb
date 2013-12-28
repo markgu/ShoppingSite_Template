@@ -1,13 +1,24 @@
 require 'spec_helper'
 
 describe User do
+  it { should validate_presence_of(:userId) }
+  it { should validate_presence_of(:firstName) }
+  it { should validate_presence_of(:lastName) }
+  it { should validate_presence_of(:password) }
+  it { should validate_presence_of(:email) }
+  it do
+    User.create!(@attr)
+    should validate_uniqueness_of(:email)
+  end
+
   before(:each) do
     @attr = {
         userId: 'testid',
         firstName: 'test',
         lastName: 'test',
         password: 'testpassword',
-        password_confirmation: 'testpassword'
+        password_confirmation: 'testpassword' ,
+        email: 'test@test.com'
     }
   end
 
@@ -39,8 +50,20 @@ describe User do
     user.should_not be_valid
   end
 
+  it 'should require email' do
+    user = User.new(@attr.merge(email: ''))
+    user.should_not be_valid
+    user = User.new(@attr.merge(email: 'test@test'))
+    user.should_not be_valid
+  end
 
-
+  it 'should reject invalid email' do
+    addresses = %w[test@test test_at_test test@test,com ]
+    addresses.each do |address|
+      user = User.new(@attr.merge(email: address))
+      user.should_not be_valid
+    end
+  end
 
 
 end

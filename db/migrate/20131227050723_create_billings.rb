@@ -4,6 +4,7 @@ class CreateBillings < ActiveRecord::Migration
       t.integer :orderNo
       t.integer :amount
       t.string :address, limit: 200
+      t.belongs_to :user
 
       t.timestamps
     end

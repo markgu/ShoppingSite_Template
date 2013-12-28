@@ -4,6 +4,7 @@ class CreateProductImages < ActiveRecord::Migration
       t.integer :width
       t.integer :height
       t.integer :size
+      t.belongs_to :product
 
       t.timestamps
     end
