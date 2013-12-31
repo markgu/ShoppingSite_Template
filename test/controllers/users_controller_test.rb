@@ -5,6 +5,7 @@ class UsersControllerTest < ActionController::TestCase
     @user = users(:one)
   end
 
+=begin
   test "should get index" do
     get :index
     assert_response :success
@@ -18,7 +19,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should create user" do
     assert_difference('User.count') do
-      post :create, user: { city: @user.city, firstName: @user.firstName, lastName: @user.lastName, password: @user.password, postcode: @user.postcode, state: @user.state, street: @user.street, userId: @user.userId }
+      post :create, user: { city: @user.city, firstName: @user.firstName, lastName: @user.lastName, password: @user.password, postcode: @user.postcode, state: @user.state, street: @user.street, userId: @user.userId , email:@user.email}
     end
 
     assert_redirected_to user_path(assigns(:user))
@@ -46,4 +47,11 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to users_path
   end
+=end
+
+  # added test from here
+
+
+
+
 end

@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Name</th>
       <th>Company</th>
       <th>Price</th>
       <th>Instock</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><%= product.name %></td>
         <td><%= product.company %></td>
         <td><%= product.price %></td>
         <td><%= product.inStock %></td>

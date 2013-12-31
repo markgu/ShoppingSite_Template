@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Rails_Guides/.idea/Rails_Guides.iml" filepath="$PROJECT_DIR$/../Rails_Guides/.idea/Rails_Guides.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ShoppingSite_Template.iml" filepath="$PROJECT_DIR$/.idea/ShoppingSite_Template.iml" />
     </modules>
   </component>

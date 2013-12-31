@@ -1,21 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  userId: MyString
-  firstName: MyString
-  lastName: MyString
-  password: MyString
-  street: MyString
-  city: MyString
-  state: MyString
-  postcode: 1
+  userId: testid111
+  firstName: test
+  lastName: id1
+  password: testpassword
+  password_confirmation: testpassword
+  street: 12 Donald rd
+  city:  Epping
+  state: NWS
+  postcode: 2000
+  email: testid111@test.com
 
 two:
-  userId: MyString
-  firstName: MyString
-  lastName: MyString
-  password: MyString
-  street: MyString
-  city: MyString
-  state: MyString
-  postcode: 1
+  userId: testid2
+  firstName: test
+  lastName: id2
+  password: testpassword
+  password_confirmation: testpassword
+  street: 55 My st
+  city: Carlingford
+  state: NWS
+  postcode: 2118
+  email: testid2@test.com

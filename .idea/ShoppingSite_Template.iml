@@ -30,6 +30,8 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
     <configuration default="false" name="spec: ShoppingSite_Template" type="RakeRunConfigurationType" factoryName="Rake">
@@ -94,6 +96,10 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
     <configuration default="false" name="Run spec 'user_spec': ShoppingSite_Template" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
@@ -128,6 +134,122 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="Run test 'products_controller_test': ShoppingSite_Template" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="ShoppingSite_Template" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) -Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/controllers/products_controller_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Run test 'user_test': ShoppingSite_Template" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="ShoppingSite_Template" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) -Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/models/user_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Run test 'sessions_controller_test': ShoppingSite_Template" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="ShoppingSite_Template" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) -Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/controllers/sessions_controller_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Run spec 'sessions_spec': ShoppingSite_Template" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="ShoppingSite_Template" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/view/sessions_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
@@ -147,6 +269,7 @@
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.14, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara (v2.2.0, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, ruby-2.0.0-p247) [gem]" level="application" />
@@ -160,8 +283,10 @@
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.1, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.5.2, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v4.7.5, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.2, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.1, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, ruby-2.0.0-p247) [gem]" level="application" />
@@ -187,6 +312,8 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v2.1.0, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.38, ruby-2.0.0-p247) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.4.0, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, ruby-2.0.0-p247) [gem]" level="application" />
+    <orderEntry type="module" module-name="Rails_Guides" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

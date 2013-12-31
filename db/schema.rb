@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228120106) do
+ActiveRecord::Schema.define(version: 20131229113331) do
 
   create_table "billing_products", force: true do |t|
     t.string   "productName"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 20131228120106) do
     t.integer  "seller_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "search_histories", force: true do |t|

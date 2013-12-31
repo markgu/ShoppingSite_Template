@@ -13,7 +13,7 @@ describe User do
 
   before(:each) do
     @attr = {
-        userId: 'testid',
+        userId: 'testId',
         firstName: 'test',
         lastName: 'test',
         password: 'testpassword',
@@ -23,7 +23,9 @@ describe User do
   end
 
   it 'should create a new User given a valid attribute' do
-    User.create!(@attr)
+    user = User.create!(@attr)
+    assert_equal user.userId , 'testId'
+    assert_equal user.email , 'test@test.com'
   end
 
   it 'should require userId' do
