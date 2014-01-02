@@ -13,6 +13,12 @@
       <jdbc-url>jdbc:sqlite:C:\Ruby_workspace\ShoppingSite_Template\db\test.sqlite3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails Rails_Guides: development" uuid="65bd56a9-ea04-4e0f-9abb-ccb2e95fa35f">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Ruby_workspace\Rails_Guides\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 

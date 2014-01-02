@@ -1,13 +1,21 @@
-<%= form_tag( {controller: "sessions" , action: "create"} , method: "post") do %>
+<h1>Login</h1>
+
+<% if flash[:error] %>
+<div id="error_explanation">
+  <% flash[:error] if flash[:error] %>
+</div>
+<% end %>
+
+<%= form_for :session do |f| %>
     <div class="field">
-      <%= label_tag :userId, "UserId" %><br>
-      <%= text_field_tag :userId %>
+      <%= f.label :userId, "UserId" %><br>
+      <%= f.text_field :userId %>
     </div>
     <div class="field">
-      <%= label_tag :password, "Password" %><br>
-      <%= password_field_tag :password %>
+      <%= f.label :password, "Password" %><br>
+      <%= f.password_field :password %>
     </div>
     <div class="actions">
-      <%= submit_tag("Log on") %>
+      <%= f.submit("Log on") %>
     </div>
 <% end %>

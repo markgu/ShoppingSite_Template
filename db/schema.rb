@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229113331) do
+ActiveRecord::Schema.define(version: 20140102042404) do
 
   create_table "billing_products", force: true do |t|
     t.string   "productName"
-    t.integer  "amount"
-    t.integer  "subTotal"
-    t.integer  "total"
+    t.integer  "quantity"
+    t.integer  "price"
+    t.integer  "sub_total"
     t.integer  "billing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20131229113331) do
 
   create_table "products", force: true do |t|
     t.string   "company"
-    t.integer  "price"
+    t.decimal  "price",               precision: 10, scale: 2
     t.integer  "inStock"
     t.text     "info"
     t.integer  "product_category_id"

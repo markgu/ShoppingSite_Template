@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    user_params = user_params_with_password_encrypt(user_params)
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
@@ -39,6 +40,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    user_params = user_params_with_password_encrypt(user_params)
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -69,6 +71,11 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:userId, :firstName, :lastName, :password, :password_confirmation, :email, :street, :city, :state, :postcode)
+    end
+
+    def user_params_with_password_encrypt(user_params)
+      params[:user][:password] = User.encrypt_password(params[:user][:password])
+      params
     end
 
 

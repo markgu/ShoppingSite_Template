@@ -1,17 +1,16 @@
 class SessionsController < ApplicationController
 
   def new
-    @user = User.new
   end
 
   def create
-    user = User.find_by(userId: params[:userId])
-    if user && user.authenticate(user, params[:password])
-      session[user.userId] = user
+    user = User.authenticate(session_params[:userId], session_params[:password])
+    if user
+      sessions[:userId] = user.userId
       redirect_to products_url
     else
       flash[:error] = "Invalid userId/password combination"
-      render 'new'
+      render action: 'new'
     end
 
   end
@@ -19,10 +18,15 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1
   # DELETE /sessions/1.json
   def destroy
-    user = User.find(params[:id])
-    session.delete(user.userId)
+    sessions[:userId] = nil
+    #user = User.find(params[:id])
+    #session.delete(user.userId)
     redirect_to products_url
   end
 
+  private
+  def session_params
+    params.require(:session).permit(:userId, :password)
+  end
 
 end

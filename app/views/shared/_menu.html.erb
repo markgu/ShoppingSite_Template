@@ -1,3 +1,8 @@
+<div id="login_info">
+  <% if $user_name %>
+    Welcome <%= $user_name %>
+  <% end %>
+</div>
 <div id="navcontainer">
   <ul>
     <li><%= link_to 'Users', users_path %></li>

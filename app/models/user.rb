@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  self.primary_key = "userId"
 
   has_many :product_comments
   has_one :shopping_cart
@@ -20,11 +21,17 @@ class User < ActiveRecord::Base
             uniqueness: {case_sensitive: false }
 
 
-  def authenticate(user, password)
-    if(user.password == password)
-      true
-    else false
+  def self.authenticate(userId, password)
+    user = User.find_by(:userId, userId)
+    if user && user.password == encrypt_password(password)
+      user
+    else
+      nil
     end
+  end
+
+  def self.encrypt_password(password)
+    Digest::MD5.hexdigest(password)
   end
 
   def to_s
