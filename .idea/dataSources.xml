@@ -19,6 +19,12 @@
       <jdbc-url>jdbc:sqlite:C:\Ruby_workspace\Rails_Guides\db\development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails Rails_Guides: test" uuid="8f2162ec-fbcc-411a-9b8c-a10735487d2e">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Ruby_workspace\Rails_Guides\db\test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 

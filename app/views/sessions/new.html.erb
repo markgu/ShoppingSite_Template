@@ -2,20 +2,20 @@
 
 <% if flash[:error] %>
 <div id="error_explanation">
-  <% flash[:error] if flash[:error] %>
+  <%= flash[:error] %>
 </div>
 <% end %>
 
-<%= form_for :session do |f| %>
+<%= form_for :session, url: {action: "create" } do |f| %>
     <div class="field">
-      <%= f.label :userId, "UserId" %><br>
+      <%= f.label :userId %><br>
       <%= f.text_field :userId %>
     </div>
     <div class="field">
-      <%= f.label :password, "Password" %><br>
+      <%= f.label :password %><br>
       <%= f.password_field :password %>
     </div>
     <div class="actions">
-      <%= f.submit("Log on") %>
+      <%= f.submit %>
     </div>
 <% end %>

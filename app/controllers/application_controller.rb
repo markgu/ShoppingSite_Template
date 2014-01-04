@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
       redirect_to login_path
     else
-      $user_name = User.find_by(:userId, session[:userId]).firstName
+      $user_name = User.find_by(userId: session[:userId]).firstName
 
     end
 

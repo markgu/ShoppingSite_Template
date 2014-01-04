@@ -1,13 +1,18 @@
 class SessionsController < ApplicationController
 
   def new
+    #@session = Struct.new(:userId, :password)
   end
 
   def create
-    user = User.authenticate(session_params[:userId], session_params[:password])
+    puts "================================================="
+    puts session_params
+    user = User.authenticate(session_params)
+    puts user
     if user
-      sessions[:userId] = user.userId
-      redirect_to products_url
+      session[:userId] = user.userId
+      puts "session info => #{session[:userId]}"
+      redirect_to products_path
     else
       flash[:error] = "Invalid userId/password combination"
       render action: 'new'

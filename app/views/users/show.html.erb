@@ -16,11 +16,6 @@
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
   <strong>Street:</strong>
   <%= @user.street %>
 </p>
@@ -39,6 +34,7 @@
   <strong>Postcode:</strong>
   <%= @user.postcode %>
 </p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
